@@ -15,10 +15,10 @@ export default function BenefitsSection() {
   const { t } = useI18n();
 
   return (
-    <section className="bg-[#f8f3e8] px-5 py-28 sm:px-8 md:py-40" id="benefits">
+    <section className="bg-[#f8f3e8] px-5 py-28 transition-colors duration-[var(--motion-standard)] dark:bg-[#121210] sm:px-8 md:py-40" id="benefits">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 border-b border-black/15 pb-16 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-black/45">{t("benefits.eyebrow")}</p>
+        <div className="grid gap-8 border-b border-black/15 pb-16 dark:border-white/15 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-black/45 dark:text-white/50">{t("benefits.eyebrow")}</p>
           <TextAnimation
             as="h2"
             text={t("benefits.title")}
@@ -33,17 +33,17 @@ export default function BenefitsSection() {
 
             return (
               <article
-                className="rounded-[1.75rem] border border-black/10 bg-white/55 p-7 transition-transform duration-[var(--motion-fast)] hover:-translate-y-1"
+                className="rounded-[var(--component-radius)] border border-black/10 bg-white/55 p-7 transition-[transform,background-color,border-color] duration-[var(--motion-fast)] hover:-translate-y-1 dark:border-white/10 dark:bg-white/6"
                 key={benefit.key}
               >
                 <div className="mb-14 flex items-center justify-between">
                   <span className="grid size-11 place-items-center rounded-2xl bg-[#f5c451]">
                     <Icon className="size-5" />
                   </span>
-                  <span className="font-mono text-xs text-black/35">0{index + 1}</span>
+                  <span className="font-mono text-xs text-black/35 dark:text-white/40">0{index + 1}</span>
                 </div>
                 <h3 className="text-2xl font-semibold tracking-tight">{title}</h3>
-                <p className="mt-3 leading-7 text-black/55">{t(`benefits.items.${benefit.key}.copy`)}</p>
+                <p className="mt-3 leading-7 text-black/55 dark:text-white/60">{t(`benefits.items.${benefit.key}.copy`)}</p>
               </article>
             );
           })}

@@ -16,6 +16,10 @@
     "ar": "AR",
     "arName": "Arabe"
   },
+  "theme": {
+    "switchToLight": "Passer au mode clair",
+    "switchToDark": "Passer au mode sombre"
+  },
   "nav": {
     "overview": "Aperçu",
     "workflow": "Flux",

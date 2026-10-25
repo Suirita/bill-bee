@@ -26,8 +26,7 @@ export function LiquidGlassCard({
           visibility,
         )}
         style={{
-          background:
-            "linear-gradient(135deg, rgba(255,255,255,0.46) 0%, rgba(255,255,255,0.2) 46%, rgba(255,248,230,0.12) 100%)",
+          background: "var(--glass-base)",
           backdropFilter: "blur(22px) saturate(1.35)",
           WebkitBackdropFilter: "blur(22px) saturate(1.35)",
         }}
@@ -40,8 +39,7 @@ export function LiquidGlassCard({
           visibility,
         )}
         style={{
-          background:
-            "radial-gradient(ellipse 65% 130% at 12% -45%, rgba(255,255,255,0.88), transparent 58%)",
+          background: "var(--glass-shine)",
         }}
       />
 
@@ -52,8 +50,7 @@ export function LiquidGlassCard({
           visibility,
         )}
         style={{
-          boxShadow:
-            "inset 0 -1px 0 rgba(255,255,255,0.18)",
+          boxShadow: "var(--glass-inset)",
         }}
       />
 

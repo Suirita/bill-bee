@@ -6,6 +6,7 @@ import { useMotionValueEvent, useScroll } from "motion/react";
 import { useI18n } from "@/components/i18n/i18n-provider";
 import LocaleSwitcher from "@/components/i18n/locale-switcher";
 import CreativeCta from "@/components/landing/creative-cta";
+import ThemeToggle from "@/components/theme/theme-toggle";
 import { LiquidGlassCard } from "@/components/ui/liquid-glass";
 import { animations } from "@/lib/animation-config";
 
@@ -30,8 +31,8 @@ export default function LandingNavbar() {
       <header
         className={`isolate mx-auto border transition-[width,top,border-radius,box-shadow,background-color,border-color] duration-[var(--motion-navbar)] ${
           compact
-            ? "fixed inset-x-0 top-3 w-[calc(100%-1.5rem)] max-w-5xl rounded-full border-white/45 bg-white/10 shadow-[0_16px_45px_rgba(29,29,27,0.14),0_2px_8px_rgba(29,29,27,0.08)]"
-            : "relative top-0 w-full max-w-none rounded-none border-x-0 border-t-0 border-black/10 bg-[#f8f3e8]/88 backdrop-blur-xl"
+            ? "fixed inset-x-0 top-3 w-[calc(100%-1.5rem)] max-w-5xl rounded-full border-white/45 bg-white/10 shadow-[0_16px_45px_rgba(29,29,27,0.14),0_2px_8px_rgba(29,29,27,0.08)] dark:border-white/15 dark:bg-black/25 dark:shadow-[0_16px_45px_rgba(0,0,0,0.35),0_2px_8px_rgba(0,0,0,0.25)]"
+            : "relative top-0 w-full max-w-none rounded-none border-x-0 border-t-0 border-black/10 bg-[#f8f3e8]/88 backdrop-blur-xl dark:border-white/10 dark:bg-[#121210]/88"
         }`}
       >
         <LiquidGlassCard active={compact}>
@@ -62,6 +63,7 @@ export default function LandingNavbar() {
               ))}
             </nav>
             <div className="flex items-center gap-2">
+              <ThemeToggle />
               <LocaleSwitcher />
               <CreativeCta compact label={t("nav.start")} />
             </div>

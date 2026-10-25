@@ -30,6 +30,10 @@ const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffec
 const segmenter =
   typeof Intl !== 'undefined' && Intl.Segmenter ? new Intl.Segmenter('en', { granularity: 'grapheme' }) : null;
 
+// Arabic letters must stay together inside a word so the browser can apply
+// contextual shaping. Animating each letter in its own span disconnects them.
+const JOINING_SCRIPT_RE = /[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]/;
+
 const splitIntoCharacters = text =>
   segmenter ? Array.from(segmenter.segment(text), segment => segment.segment) : Array.from(text);
 
@@ -151,27 +155,29 @@ const RotatingText = forwardRef((props, ref) => {
 
   const elements = useMemo(() => {
     const currentText = texts[activeIndex] ?? '';
-    if (splitBy === 'characters') {
+    const effectiveSplitBy = splitBy === 'characters' && JOINING_SCRIPT_RE.test(currentText) ? 'words' : splitBy;
+
+    if (effectiveSplitBy === 'characters') {
       const words = currentText.split(' ');
       return words.map((word, i) => ({
         characters: splitIntoCharacters(word),
         needsSpace: i !== words.length - 1
       }));
     }
-    if (splitBy === 'words') {
+    if (effectiveSplitBy === 'words') {
       return currentText.split(' ').map((word, i, arr) => ({
         characters: [word],
         needsSpace: i !== arr.length - 1
       }));
     }
-    if (splitBy === 'lines') {
+    if (effectiveSplitBy === 'lines') {
       return currentText.split('\n').map((line, i, arr) => ({
         characters: [line],
         needsSpace: i !== arr.length - 1
       }));
     }
 
-    return currentText.split(splitBy).map((part, i, arr) => ({
+    return currentText.split(effectiveSplitBy).map((part, i, arr) => ({
       characters: [part],
       needsSpace: i !== arr.length - 1
     }));
