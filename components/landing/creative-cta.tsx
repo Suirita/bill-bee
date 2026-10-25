@@ -19,8 +19,8 @@ export default function CreativeCta({
   return (
     <Link
       className={cn(
-        "group relative inline-grid cursor-pointer place-items-center overflow-hidden rounded-full border border-black/15 bg-white font-semibold text-black shadow-sm outline-none transition-[transform,box-shadow] duration-[var(--motion-emphasized)] ease-[var(--motion-ease-out)] hover:-translate-y-0.5 hover:shadow-md focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2",
-        compact ? "h-10 min-w-36 px-4 text-sm" : "h-13 min-w-44 px-6",
+        "group relative inline-grid cursor-pointer place-items-center overflow-hidden rounded-[var(--component-radius)] border border-black/15 bg-white font-semibold text-black shadow-sm outline-none transition-[transform,box-shadow,background-color,border-color,color] duration-[var(--motion-emphasized)] ease-[var(--motion-ease-out)] hover:-translate-y-0.5 hover:shadow-md focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 dark:border-white/15 dark:bg-[#24241f] dark:text-[#fffaf0] dark:focus-visible:ring-white dark:focus-visible:ring-offset-[#121210]",
+        compact ? "h-11 min-w-36 px-4 text-sm" : "h-13 min-w-44 px-6",
         className,
       )}
       href="/auth"
@@ -29,12 +29,12 @@ export default function CreativeCta({
         {label}
       </span>
 
-      <span className="absolute inset-0 z-30 flex translate-x-10 items-center justify-center gap-2 text-white opacity-0 transition-[transform,opacity] duration-[var(--motion-emphasized)] ease-[var(--motion-ease-out)] group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100">
+      <span className="absolute inset-0 z-30 flex translate-x-10 items-center justify-center gap-2 text-white opacity-0 transition-[transform,opacity,color] duration-[var(--motion-emphasized)] ease-[var(--motion-ease-out)] group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100 dark:text-[#1d1d1b]">
         <span>{label}</span>
         <ArrowRight className="size-4 transition-transform duration-[var(--motion-emphasized)] group-hover:translate-x-1 group-focus-visible:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 rtl:group-focus-visible:-translate-x-1" />
       </span>
 
-      <span className="absolute left-3 top-1/2 z-10 size-2 -translate-y-1/2 rounded-full bg-[#1d1d1b] transition-[left,top,width,height,transform,border-radius] duration-[var(--motion-emphasized)] ease-[var(--motion-ease-out)] group-hover:left-0 group-hover:top-0 group-hover:size-full group-hover:scale-[1.04] group-hover:translate-y-0 group-hover:rounded-full group-focus-visible:left-0 group-focus-visible:top-0 group-focus-visible:size-full group-focus-visible:scale-[1.04] group-focus-visible:translate-y-0 group-focus-visible:rounded-full" data-cursor-trail-color="#f5c451" />
+      <span className="absolute left-3 top-1/2 z-10 size-2 -translate-y-1/2 rounded-full bg-[#1d1d1b] transition-[left,top,width,height,transform,border-radius,background-color] duration-[var(--motion-emphasized)] ease-[var(--motion-ease-out)] group-hover:left-0 group-hover:top-0 group-hover:size-full group-hover:scale-[1.04] group-hover:translate-y-0 group-hover:rounded-[var(--component-radius)] group-focus-visible:left-0 group-focus-visible:top-0 group-focus-visible:size-full group-focus-visible:scale-[1.04] group-focus-visible:translate-y-0 group-focus-visible:rounded-[var(--component-radius)] dark:bg-[#f5c451]" data-cursor-trail-color="#f5c451" />
     </Link>
   );
 }

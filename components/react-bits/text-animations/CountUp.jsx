@@ -11,7 +11,13 @@ const UNITS = [
   [1e6, 'M'],
   [1e3, 'K']
 ];
-const SLOT_STYLE = { display: 'inline-block', height: `${CELL}em`, lineHeight: `${CELL}em` };
+const SLOT_STYLE = {
+  display: 'inline-block',
+  height: `${CELL}em`,
+  lineHeight: `${CELL}em`,
+  paddingInline: '0.035em',
+  marginInline: '-0.035em'
+};
 const SR_ONLY = {
   position: 'absolute',
   width: 1,
@@ -357,8 +363,9 @@ export default function CountUp({
   return (
     <span
       className={className}
+      dir="ltr"
       ref={ref}
-      style={{ fontVariantNumeric: 'tabular-nums', ...style }}
+      style={{ direction: 'ltr', unicodeBidi: 'isolate', overflow: 'visible', fontVariantNumeric: 'tabular-nums', ...style }}
       onPointerEnter={replayOnHover ? replay : undefined}
     >
       {model ? (
@@ -366,7 +373,7 @@ export default function CountUp({
           <span
             key={`roll-${play?.id || 0}`}
             aria-hidden="true"
-            style={{ display: 'inline-flex', whiteSpace: 'pre', userSelect: 'none' }}
+            style={{ display: 'inline-flex', maxWidth: '100%', paddingBlock: '0.08em', marginBlock: '-0.08em', whiteSpace: 'pre', userSelect: 'none' }}
           >
             {prefix && <span style={SLOT_STYLE}>{prefix}</span>}
             {model.slots.map((slot, index) => {

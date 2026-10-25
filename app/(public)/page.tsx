@@ -6,7 +6,7 @@ import PricingSection from "@/components/landing/pricing-section";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-clip bg-[#f8f3e8] text-[#1d1d1b]">
+    <main className="min-h-screen overflow-x-clip bg-[#f8f3e8] text-[#1d1d1b] transition-colors duration-[var(--motion-standard)] dark:bg-[#121210] dark:text-[#f7f3e9]">
       <LandingNavbar />
       <HeroSection />
       <HorizontalStory />

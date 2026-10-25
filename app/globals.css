@@ -49,6 +49,11 @@
 }
 
 :root {
+  color-scheme: light;
+  --component-radius: 1rem;
+  --glass-base: linear-gradient(135deg, rgba(255,255,255,0.46) 0%, rgba(255,255,255,0.2) 46%, rgba(255,248,230,0.12) 100%);
+  --glass-shine: radial-gradient(ellipse 65% 130% at 12% -45%, rgba(255,255,255,0.88), transparent 58%);
+  --glass-inset: inset 0 -1px 0 rgba(255,255,255,0.18);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -84,6 +89,10 @@
 }
 
 .dark {
+  color-scheme: dark;
+  --glass-base: linear-gradient(135deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.07) 48%, rgba(245,196,81,0.04) 100%);
+  --glass-shine: radial-gradient(ellipse 65% 130% at 12% -45%, rgba(255,255,255,0.28), transparent 58%);
+  --glass-inset: inset 0 -1px 0 rgba(255,255,255,0.1);
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -148,6 +157,36 @@ body:has(.public-scroll-shell)::-webkit-scrollbar {
   font-weight: 700;
 }
 
+.navbar-switcher,
+.navbar-select-switcher .glide-select__trigger {
+  border-radius: var(--component-radius);
+  transition:
+    background-color var(--motion-standard) var(--motion-ease-out),
+    border-color var(--motion-standard) var(--motion-ease-out),
+    color var(--motion-standard) var(--motion-ease-out),
+    box-shadow var(--motion-standard) var(--motion-ease-out),
+    transform var(--motion-standard) var(--motion-ease-out);
+}
+
+.navbar-select-switcher .glide-select__trigger {
+  padding-inline: 0.875rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar-switcher:hover,
+  .navbar-select-switcher .glide-select__trigger:not(:disabled):hover {
+    background: #fff;
+    box-shadow: 0 4px 12px rgb(29 29 27 / 12%);
+    transform: translateY(-2px);
+  }
+
+  .dark .navbar-switcher:hover,
+  .dark .navbar-select-switcher .glide-select__trigger:not(:disabled):hover {
+    background: #303029;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 28%);
+  }
+}
+
 .locale-glide-select .glide-select__menu {
   border: 1px solid rgb(29 29 27 / 12%);
   box-shadow:
@@ -158,6 +197,21 @@ body:has(.public-scroll-shell)::-webkit-scrollbar {
 .locale-glide-select .glide-select__option,
 .locale-glide-select .glide-select__trigger {
   letter-spacing: -0.01em;
+}
+
+.dark .locale-glide-select .glide-select__trigger,
+.dark .locale-glide-select .glide-select__menu {
+  border-color: rgb(255 255 255 / 12%);
+}
+
+.dark .locale-glide-select .glide-select__trigger {
+  box-shadow: 0 1px 2px rgb(0 0 0 / 18%);
+}
+
+.dark .locale-glide-select .glide-select__menu {
+  box-shadow:
+    0 18px 45px rgb(0 0 0 / 35%),
+    0 3px 10px rgb(0 0 0 / 24%);
 }
 
 /* Keep the workflow bento readable while every story panel stays inside one

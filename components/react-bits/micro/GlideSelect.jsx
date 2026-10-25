@@ -242,7 +242,7 @@ export default function GlideSelect({
         '--gs-highlight': highlightColor,
         '--gs-text': textColor,
         '--gs-radius': `${radius}px`,
-        '--gs-inner-radius': `${Math.max(3, radius - 4)}px`,
+        '--gs-inner-radius': `${radius}px`,
         '--gs-chip': `${S.chip}px`,
         '--gs-row': `${S.row}px`,
         '--gs-font': `${S.font}px`,

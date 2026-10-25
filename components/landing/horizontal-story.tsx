@@ -12,6 +12,7 @@ import MagicBento from "@/components/react-bits/components/MagicBento";
 import CountUp from "@/components/react-bits/text-animations/CountUp";
 import TextAnimation from "@/components/ui/scroll-text";
 import { animations } from "@/lib/animation-config";
+import { useTheme } from "@/lib/theme";
 
 const panels = [
   {
@@ -25,7 +26,7 @@ const panels = [
   {
     step: "02",
     key: "tenants",
-    className: "bg-[#dff3e7] text-[#15221b]",
+    className: "bg-[#dff3e7] text-[#15221b] dark:bg-[#17352b] dark:text-[#eef8f2]",
     icon: Building2,
     preview: "tenants",
     trailColor: undefined,
@@ -33,7 +34,7 @@ const panels = [
   {
     step: "03",
     key: "testimonial",
-    className: "bg-[#1d1d1b] text-[#fffaf0]",
+    className: "bg-[#1d1d1b] text-[#fffaf0] dark:bg-[#0c0c0b]",
     icon: Quote,
     preview: "testimonial",
     trailColor: "#f5c451",
@@ -41,7 +42,7 @@ const panels = [
 ] as const;
 
 function ProductDetailsPreview() {
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const metrics = [
     { key: "outstanding", icon: ReceiptText, to: 84200, prefix: "$", suffix: "", format: "compact", colSpan: 1, rowSpan: 1 },
     { key: "paid", icon: CircleCheckBig, to: 14600, prefix: "$", suffix: "", format: "compact", colSpan: 1, rowSpan: 1 },
@@ -73,8 +74,8 @@ function ProductDetailsPreview() {
             to={to}
             mode="roll"
             easing="easeOut"
-            format={format}
-            separator=","
+            format={locale === "ar" && format === "compact" ? "standard" : format}
+            separator={locale === "ar" ? "٬" : ","}
             prefix={prefix}
             suffix={suffix}
             direction="up"
@@ -82,8 +83,8 @@ function ProductDetailsPreview() {
             delay={animations.magicBento.countDelaySeconds + index * animations.magicBento.countStaggerSeconds}
             trigger="view"
             replayOnHover
-            className={`count-up-text block font-bold leading-none tracking-[-0.065em] max-sm:text-[1.65rem] ${
-              featured ? "text-[clamp(2.75rem,4vw,4rem)]" : "text-[clamp(1.7rem,2.2vw,2.5rem)]"
+            className={`count-up-text block max-w-full self-start font-bold leading-[1.2] tracking-[-0.04em] max-sm:text-[1.55rem] ${
+              featured ? "text-[clamp(2.5rem,4vw,3.75rem)]" : "text-[clamp(1.6rem,2vw,2.25rem)]"
             }`}
           />
           <h3 className={`${featured ? "mt-4 text-base" : "mt-2 text-xs"} font-semibold tracking-tight`}>
@@ -129,7 +130,7 @@ function ProductDetailsPreview() {
         columns={4}
         rowHeight={150}
         gap={12}
-        radius={15}
+        radius={16}
         theme="light"
         glowColor="#a66b00"
         textAutoHide={false}
@@ -184,43 +185,48 @@ function TenantsPreview() {
 
 function TestimonialPreview() {
   const { t } = useI18n();
+  const theme = useTheme();
+  const isDark = theme === "dark";
   const testimonialKeys = ["amina", "julien", "sara"] as const;
 
   return (
-    <div className="story-testimonial-stack h-[20rem] w-full max-w-[38rem] sm:h-[22rem] xl:h-[35rem]" data-cursor-trail-color="#1d1d1b">
+    <div
+      className="story-testimonial-stack h-[20rem] w-full max-w-[38rem] sm:h-[22rem] xl:h-[35rem]"
+      data-cursor-trail-color={isDark ? "#f5c451" : "#1d1d1b"}
+    >
       <CardSwap
         width={420}
         height={300}
         cardDistance={58}
         verticalDistance={54}
-        cardRadius={15}
+        cardRadius={16}
         delay={animations.cardSwap.delayMs}
         speed={animations.cardSwap.speed}
         bounce={animations.cardSwap.bounce}
         hoverSpread={animations.cardSwap.hoverSpread}
         intro={animations.cardSwap.intro}
-        theme="light"
+        theme={theme}
         ariaLabel={t("story.testimonial.ariaLabel")}
       >
         {testimonialKeys.map((key, index) => (
           <Card key={key}>
-            <figure className="flex h-full flex-col p-7 text-[#1d1d1b]">
+            <figure className="flex h-full flex-col p-7 text-[#1d1d1b] dark:text-[#f7f3e9]">
               <div className="flex items-center justify-between">
                 <Quote className="size-8 text-[#a66b00]" />
-                <span className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-black/40">
+                <span className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-black/40 dark:text-white/45">
                   {t("story.testimonial.label")} · {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
               <blockquote className="mt-8 flex-1 text-xl font-medium leading-snug tracking-[-0.035em]">
                 {t(`story.testimonial.items.${key}.quote`)}
               </blockquote>
-              <figcaption className="flex items-center gap-3 border-t border-black/10 pt-5">
-                <span className="grid size-10 place-items-center rounded-full bg-[#f5c451] text-sm font-bold">
+              <figcaption className="flex items-center gap-3 border-t border-black/10 pt-5 dark:border-white/10">
+                <span className="grid size-10 place-items-center rounded-full bg-[#f5c451] text-sm font-bold text-[#1d1d1b]">
                   {t(`story.testimonial.items.${key}.initials`)}
                 </span>
                 <span>
                   <span className="block text-sm font-semibold">{t(`story.testimonial.items.${key}.name`)}</span>
-                  <span className="mt-0.5 block text-xs text-black/50">{t(`story.testimonial.items.${key}.role`)}</span>
+                  <span className="mt-0.5 block text-xs text-black/50 dark:text-white/50">{t(`story.testimonial.items.${key}.role`)}</span>
                 </span>
               </figcaption>
             </figure>
@@ -264,8 +270,8 @@ export default function HorizontalStory() {
           <span>{t("story.eyebrow")}</span>
           <span>{t("story.scrollHint")}</span>
         </div>
-        <div className="absolute inset-x-0 top-0 z-30 h-1 bg-black/10">
-          <motion.div className="h-full bg-black" style={{ width: progress }} />
+        <div className="absolute inset-x-0 top-0 z-30 h-1 bg-black/10 dark:bg-white/10">
+          <motion.div className="h-full bg-black dark:bg-white" style={{ width: progress }} />
         </div>
 
         <motion.div

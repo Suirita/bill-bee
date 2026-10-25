@@ -16,6 +16,10 @@
     "ar": "AR",
     "arName": "العربية"
   },
+  "theme": {
+    "switchToLight": "التبديل إلى الوضع الفاتح",
+    "switchToDark": "التبديل إلى الوضع الداكن"
+  },
   "nav": {
     "overview": "نظرة عامة",
     "workflow": "سير العمل",
