@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "title": "Bill Bee — Calm business paperwork",
+    "description": "Create quotes, send invoices, record expenses, and keep business records connected in one calm workspace."
+  },
+  "brand": {
+    "name": "Bill Bee",
+    "mark": "B"
+  },
+  "language": {
+    "label": "Language",
+    "en": "EN",
+    "enName": "English",
+    "fr": "FR",
+    "frName": "French",
+    "ar": "AR",
+    "arName": "Arabic"
+  },
+  "nav": {
+    "overview": "Overview",
+    "workflow": "Workflow",
+    "tenants": "Tenants",
+    "testimonials": "Stories",
+    "pricing": "Pricing",
+    "about": "About",
+    "start": "Start creating"
+  },
+  "hero": {
+    "eyebrow": "Business paperwork, minus the busywork",
+    "titleLead": "Make every",
+    "rotating": {
+      "invoice": "invoice",
+      "quote": "quote",
+      "expense": "expense",
+      "record": "record"
+    },
+    "titleTail": "feel lighter.",
+    "description": "Create quotes, send invoices, record expenses, and track the business details that matter—all in one calm workspace.",
+    "secondaryCta": "See how it works",
+    "features": {
+      "quotes": "Quotes",
+      "invoices": "Invoices",
+      "expenses": "Expenses",
+      "records": "Business records"
+    },
+    "note": "Everything adds up ✦",
+    "dashboard": {
+      "overview": "Overview",
+      "quotes": "Quotes",
+      "invoices": "Invoices",
+      "expenses": "Expenses",
+      "openInvoices": "Open invoices",
+      "paidThisMonth": "Paid this month",
+      "recentActivity": "Recent activity",
+      "clients": {
+        "north": "Studio North",
+        "pine": "Pine & Co.",
+        "bright": "Bright Works"
+      }
+    }
+  },
+  "story": {
+    "eyebrow": "Inside Bill Bee",
+    "scrollHint": "Scroll to explore",
+    "panels": {
+      "details": {
+        "label": "Connected workflow",
+        "title": "One smooth path from the first quote to the final payment.",
+        "copy": "Create information once, carry it through every document, and always know what needs your attention next."
+      },
+      "tenants": {
+        "label": "Tenants",
+        "title": "A flexible workspace for every kind of ambitious team.",
+        "copy": "From commerce to creative work, Bill Bee keeps each tenant’s quotes, invoices, expenses, and business records moving together."
+      },
+      "testimonial": {
+        "label": "Customer stories",
+        "title": "Less admin. More confidence in every client conversation.",
+        "copy": "Independent teams use Bill Bee to stay clear on the details and spend more time doing the work clients hired them for."
+      }
+    },
+    "details": {
+      "outstanding": {
+        "title": "Outstanding",
+        "description": "Open invoice value across active client work."
+      },
+      "paid": {
+        "title": "Paid this month",
+        "description": "Collected revenue recorded in one workspace."
+      },
+      "conversion": {
+        "title": "Quote conversion",
+        "description": "Approved quotes that moved into invoicing."
+      },
+      "automated": {
+        "title": "Documents connected",
+        "description": "Quotes converted into invoices without duplicate entry."
+      },
+      "records": {
+        "title": "Records created",
+        "description": "Business records kept organized this month."
+      },
+      "overdue": {
+        "title": "Needs attention",
+        "description": "Overdue invoices ready for a friendly follow-up."
+      }
+    },
+    "tenants": {
+      "ariaLabel": "Popular company logos used as temporary tenant placeholders",
+      "logos": {
+        "stripe": "Stripe",
+        "shopify": "Shopify",
+        "notion": "Notion",
+        "figma": "Figma",
+        "hubspot": "HubSpot",
+        "dropbox": "Dropbox",
+        "zapier": "Zapier",
+        "spotify": "Spotify"
+      }
+    },
+    "testimonial": {
+      "label": "Customer note",
+      "ariaLabel": "Example customer testimonials",
+      "items": {
+        "amina": {
+          "quote": "“We stopped checking three different spreadsheets before sending an invoice. The whole team now has one clear answer.”",
+          "initials": "AM",
+          "name": "Amina M.",
+          "role": "Operations lead · Example testimonial"
+        },
+        "julien": {
+          "quote": "“Turning an approved quote into an invoice takes moments, so our client handoff finally feels seamless.”",
+          "initials": "JL",
+          "name": "Julien L.",
+          "role": "Studio founder · Example testimonial"
+        },
+        "sara": {
+          "quote": "“I can see what is paid, what is late, and what needs a follow-up before I start the day.”",
+          "initials": "SK",
+          "name": "Sara K.",
+          "role": "Independent consultant · Example testimonial"
+        }
+      }
+    }
+  },
+  "benefits": {
+    "eyebrow": "Why Bill Bee",
+    "title": "Less time chasing paperwork. More time building the business.",
+    "items": {
+      "source": {
+        "title": "One source of truth",
+        "copy": "Quotes, invoices, expenses, and client records stay connected instead of scattered."
+      },
+      "clarity": {
+        "title": "A clearer next step",
+        "copy": "See what needs approval, what is overdue, and what has already been paid."
+      },
+      "work": {
+        "title": "Built for real work",
+        "copy": "Simple workflows keep the paperwork moving without turning it into another project."
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Your business, better organized",
+    "title": "Ready to make the admin feel a little less heavy?",
+    "action": "Start with Bill Bee"
+  },
+  "pricing": {
+    "eyebrow": "Simple pricing",
+    "title": "Start small. Keep the same calm workflow as you grow.",
+    "perMonth": "/ month",
+    "popular": "Most popular",
+    "choose": "Choose {plan}",
+    "note": "Example pricing for the landing-page preview. Final billing terms can be connected later.",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "For getting the first quotes and invoices out the door.",
+        "feature1": "5 clients",
+        "feature2": "Quotes and invoices",
+        "feature3": "Expense tracking"
+      },
+      "studio": {
+        "name": "Studio",
+        "description": "For independent teams that want every record connected.",
+        "feature1": "Unlimited clients",
+        "feature2": "Recurring invoices",
+        "feature3": "Payment reminders",
+        "feature4": "Business insights"
+      },
+      "business": {
+        "name": "Business",
+        "description": "For growing operations that need more people and control.",
+        "feature1": "Everything in Studio",
+        "feature2": "5 team members",
+        "feature3": "Approval workflows",
+        "feature4": "Priority support"
+      }
+    }
+  },
+  "footer": {
+    "description": "Quotes, invoices, expenses, and business records in one calm workspace.",
+    "product": "Product",
+    "pricing": "Pricing",
+    "getStarted": "Get started"
+  }
+}
