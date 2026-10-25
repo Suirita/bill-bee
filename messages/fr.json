@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "title": "Bill Bee — Une gestion administrative plus sereine",
+    "description": "Créez des devis, envoyez des factures, enregistrez vos dépenses et centralisez vos documents professionnels dans un espace serein."
+  },
+  "brand": {
+    "name": "Bill Bee",
+    "mark": "B"
+  },
+  "language": {
+    "label": "Langue",
+    "en": "EN",
+    "enName": "Anglais",
+    "fr": "FR",
+    "frName": "Français",
+    "ar": "AR",
+    "arName": "Arabe"
+  },
+  "nav": {
+    "overview": "Aperçu",
+    "workflow": "Flux",
+    "tenants": "Locataires",
+    "testimonials": "Témoignages",
+    "pricing": "Tarifs",
+    "about": "À propos",
+    "start": "Commencer"
+  },
+  "hero": {
+    "eyebrow": "Vos documents professionnels, sans les tâches répétitives",
+    "titleLead": "Allégez chaque",
+    "rotating": {
+      "invoice": "facture",
+      "quote": "devis",
+      "expense": "dépense",
+      "record": "dossier"
+    },
+    "titleTail": "au quotidien.",
+    "description": "Créez des devis, envoyez des factures, enregistrez vos dépenses et suivez les informations essentielles de votre activité dans un espace serein.",
+    "secondaryCta": "Découvrir le fonctionnement",
+    "features": {
+      "quotes": "Devis",
+      "invoices": "Factures",
+      "expenses": "Dépenses",
+      "records": "Documents professionnels"
+    },
+    "note": "Tout finit par s’additionner ✦",
+    "dashboard": {
+      "overview": "Vue d’ensemble",
+      "quotes": "Devis",
+      "invoices": "Factures",
+      "expenses": "Dépenses",
+      "openInvoices": "Factures ouvertes",
+      "paidThisMonth": "Payé ce mois-ci",
+      "recentActivity": "Activité récente",
+      "clients": {
+        "north": "Studio North",
+        "pine": "Pine & Co.",
+        "bright": "Bright Works"
+      }
+    }
+  },
+  "story": {
+    "eyebrow": "Au cœur de Bill Bee",
+    "scrollHint": "Faites défiler pour découvrir",
+    "panels": {
+      "details": {
+        "label": "Flux connecté",
+        "title": "Un parcours fluide, du premier devis au dernier paiement.",
+        "copy": "Saisissez les informations une fois, réutilisez-les dans chaque document et sachez toujours quelle est la prochaine priorité."
+      },
+      "tenants": {
+        "label": "Locataires",
+        "title": "Un espace flexible pour chaque équipe ambitieuse.",
+        "copy": "Du commerce à la création, Bill Bee fait avancer ensemble les devis, factures, dépenses et documents professionnels de chaque locataire."
+      },
+      "testimonial": {
+        "label": "Paroles de clients",
+        "title": "Moins d’administratif. Plus d’assurance avec chaque client.",
+        "copy": "Les équipes indépendantes utilisent Bill Bee pour garder une vision claire et consacrer plus de temps au travail confié par leurs clients."
+      }
+    },
+    "details": {
+      "outstanding": {
+        "title": "À encaisser",
+        "description": "Valeur des factures ouvertes pour les missions actives."
+      },
+      "paid": {
+        "title": "Payé ce mois-ci",
+        "description": "Revenus encaissés et enregistrés dans un seul espace."
+      },
+      "conversion": {
+        "title": "Conversion des devis",
+        "description": "Devis validés qui sont passés à la facturation."
+      },
+      "automated": {
+        "title": "Documents connectés",
+        "description": "Devis transformés en factures sans double saisie."
+      },
+      "records": {
+        "title": "Documents créés",
+        "description": "Documents professionnels organisés ce mois-ci."
+      },
+      "overdue": {
+        "title": "À surveiller",
+        "description": "Factures en retard prêtes pour une relance cordiale."
+      }
+    },
+    "tenants": {
+      "ariaLabel": "Logos d’entreprises populaires utilisés temporairement comme locataires",
+      "logos": {
+        "stripe": "Stripe",
+        "shopify": "Shopify",
+        "notion": "Notion",
+        "figma": "Figma",
+        "hubspot": "HubSpot",
+        "dropbox": "Dropbox",
+        "zapier": "Zapier",
+        "spotify": "Spotify"
+      }
+    },
+    "testimonial": {
+      "label": "Avis client",
+      "ariaLabel": "Exemples de témoignages clients",
+      "items": {
+        "amina": {
+          "quote": "« Nous ne consultons plus trois feuilles de calcul avant d’envoyer une facture. Toute l’équipe dispose enfin d’une réponse claire. »",
+          "initials": "AM",
+          "name": "Amina M.",
+          "role": "Responsable des opérations · Témoignage d’exemple"
+        },
+        "julien": {
+          "quote": "« Transformer un devis validé en facture ne prend que quelques instants, et la transition avec le client est enfin fluide. »",
+          "initials": "JL",
+          "name": "Julien L.",
+          "role": "Fondateur de studio · Témoignage d’exemple"
+        },
+        "sara": {
+          "quote": "« Avant de commencer ma journée, je vois ce qui est payé, en retard ou à relancer. »",
+          "initials": "SK",
+          "name": "Sara K.",
+          "role": "Consultante indépendante · Témoignage d’exemple"
+        }
+      }
+    }
+  },
+  "benefits": {
+    "eyebrow": "Pourquoi Bill Bee",
+    "title": "Moins de temps à courir après les documents. Plus de temps pour développer votre activité.",
+    "items": {
+      "source": {
+        "title": "Une source unique de vérité",
+        "copy": "Devis, factures, dépenses et dossiers clients restent connectés au lieu d’être dispersés."
+      },
+      "clarity": {
+        "title": "Une prochaine étape plus claire",
+        "copy": "Identifiez ce qui attend une validation, ce qui est en retard et ce qui a déjà été payé."
+      },
+      "work": {
+        "title": "Conçu pour le travail réel",
+        "copy": "Des flux simples font avancer l’administratif sans le transformer en projet supplémentaire."
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Votre activité, mieux organisée",
+    "title": "Prêt à alléger un peu l’administratif ?",
+    "action": "Commencer avec Bill Bee"
+  },
+  "pricing": {
+    "eyebrow": "Tarifs simples",
+    "title": "Commencez simplement. Gardez la même sérénité en grandissant.",
+    "perMonth": "/ mois",
+    "popular": "Le plus populaire",
+    "choose": "Choisir {plan}",
+    "note": "Tarifs d’exemple pour la prévisualisation. Les conditions définitives pourront être intégrées ultérieurement.",
+    "plans": {
+      "starter": {
+        "name": "Départ",
+        "description": "Pour envoyer vos premiers devis et factures.",
+        "feature1": "5 clients",
+        "feature2": "Devis et factures",
+        "feature3": "Suivi des dépenses"
+      },
+      "studio": {
+        "name": "Studio",
+        "description": "Pour les équipes indépendantes qui souhaitent tout centraliser.",
+        "feature1": "Clients illimités",
+        "feature2": "Factures récurrentes",
+        "feature3": "Rappels de paiement",
+        "feature4": "Indicateurs d’activité"
+      },
+      "business": {
+        "name": "Entreprise",
+        "description": "Pour les structures en croissance qui ont besoin de plus de contrôle.",
+        "feature1": "Tout le forfait Studio",
+        "feature2": "5 membres d’équipe",
+        "feature3": "Circuits de validation",
+        "feature4": "Assistance prioritaire"
+      }
+    }
+  },
+  "footer": {
+    "description": "Devis, factures, dépenses et documents professionnels réunis dans un espace serein.",
+    "product": "Produit",
+    "pricing": "Tarifs",
+    "getStarted": "Commencer"
+  }
+}
